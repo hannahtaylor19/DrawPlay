@@ -21,13 +21,18 @@ public class Cat {
 	private static final int MOUTH_Y = HEAD_DIMENSION/5 * 3;
 	
 	// draw will render the Cat on the Graphics object
-	public void draw(Graphics g, int catX, int catY)
+	public void draw(Graphics g, int catX, int catY, char color)
 	{
 		Graphics2D g2 = (Graphics2D) g;
 		int x=catX;
 		int y=catY;
 		// Draw the head
-		g2.setColor(Color.gray);
+		if(color =='g') {
+			g2.setColor(Color.gray);
+		}else { //if anything but g make cat organge
+			g2.setColor(Color.orange);
+		}
+		
 		g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
 		// Draw the eyes
 		g2.setColor(Color.green);
@@ -48,4 +53,5 @@ public class Cat {
 		// added 3 Ws for emphasis on Meow
 		g2.drawString("Meowwww", catX, catY+HEAD_DIMENSION+10);	
 	}
+	
 }
