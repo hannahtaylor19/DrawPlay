@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
+@SuppressWarnings("serial")
 public class MyDrawing extends JPanel {
 	private Cat cat;
 	public MyDrawing() 
