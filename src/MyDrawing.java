@@ -7,16 +7,22 @@ import javax.swing.JPanel;
 @SuppressWarnings("serial")
 public class MyDrawing extends JPanel {
 	private Cat cat;
+	private Cat catFriend;
 	public MyDrawing() 
 	{
 		// Add critters to the drawing
 		cat = new Cat();
+		// Add a friend for our initial cat
+		catFriend = new Cat();
 	}
 	// paintComponent is called automatically when the frame needs
 	// to display (e.g., when the program starts)
 	public void paintComponent(Graphics g) {
-		// size modified to 55
+		// position modified to 55,55
 		cat.draw(g, 55, 55);
+		// draw a friend for our initial cat
+		catFriend.draw(g, 200, 200);
+		
 	}
 	
 	/**
