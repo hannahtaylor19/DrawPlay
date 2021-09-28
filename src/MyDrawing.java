@@ -19,9 +19,9 @@ public class MyDrawing extends JPanel {
 	// to display (e.g., when the program starts)
 	public void paintComponent(Graphics g) {
 		// position modified to 55,55
-		cat.draw(g, 55, 55);
+		cat.draw(g, 55, 55,'g');
 		// draw a friend for our initial cat
-		catFriend.draw(g, 200, 200);
+		catFriend.draw(g, 200, 200,'o');
 		
 	}
 	
