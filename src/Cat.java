@@ -37,7 +37,12 @@ public class Cat {
 		
 		g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
 		// Draw the eyes
-		g2.setColor(Color.green);
+		if(color =='g') { //if grey eyes are pink
+			g2.setColor(Color.pink);
+			
+		}else { //if anything but grey eyes are blue
+			g2.setColor(Color.blue);
+		}
 		x = catX + EYE_X; 
 		y = catY + EYE_Y;
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
