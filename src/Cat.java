@@ -29,15 +29,20 @@ public class Cat {
 		// Draw the head
 		if(color =='g') {
 			g2.setColor(Color.gray);
+			g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
+			// Draw the eyes
+			g2.setColor(Color.pink);
+			x = catX + EYE_X; 
+			y = catY + EYE_Y;
 		}else { //if anything but g make cat organge
 			g2.setColor(Color.orange);
+			g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
+			// Draw the eyes
+			g2.setColor(Color.blue);
+			x = catX + EYE_X; 
+			y = catY + EYE_Y;
 		}
 		
-		g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
-		// Draw the eyes
-		g2.setColor(Color.green);
-		x = catX + EYE_X; 
-		y = catY + EYE_Y;
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
 		x += EYE_SEPARATION;
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
